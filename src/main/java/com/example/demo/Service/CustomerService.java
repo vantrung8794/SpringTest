@@ -3,6 +3,8 @@ package com.example.demo.Service;
 import com.example.demo.dao.CustomerDAO;
 import com.example.demo.exeption.CustomerNotFoundException;
 import com.example.demo.model.Customer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +26,8 @@ public class CustomerService {
 //        customerList.add(customer);
 //        customerIdCount++;
 //        return  customer;
+        Logger logger = LoggerFactory.getLogger(CustomerService.class);
+        logger.info("Hello to add customer");
         return customerDAO.save(customer);
     }
 
