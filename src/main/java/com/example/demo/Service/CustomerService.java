@@ -28,6 +28,7 @@ public class CustomerService {
 //        return  customer;
         Logger logger = LoggerFactory.getLogger(CustomerService.class);
         logger.info("Hello to add customer");
+        System.out.println("Hello, logs!");
         return customerDAO.save(customer);
     }
 
